@@ -9,7 +9,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <%= link_to "Group Shalex", index_path, class: "navbar-brand" %>
+                <%= link_to "Keenability", index_path, class: "navbar-brand" %>
             </div>
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
@@ -20,63 +20,78 @@
                     <li class="<%= is_active?('/welcome/services') %>">
                         <%= link_to "Services", services_path %>
                     </li>
-                    <li class="<%= is_active?('/contact/contact_us') %>">
-                        <%= link_to "Contact", '#' %>
+                    <!-- <li class="<%#= is_active?('/contact/contact_us') %>"> -->
+                        <%#= link_to "Contact", '#' %>
+                    <!-- </li> -->
+                    <li class="<%= is_active?('/welcome/portfolio3col') %>">
+                        <%= link_to "Listings", portfolio3col_path %>
                     </li>
-                    <li class="<%= is_portfolio_active?%>">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Portfolio <b class="caret"></b></a>
-                        <ul class="dropdown-menu">
-                            <li class="<%= is_active?('/welcome/portfolio1col') %>">
-                              <%= link_to "1 Column Portfolio", portfolio1col_path %>
-                            </li>
-                            <li class="<%= is_active?('/welcome/portfolio2col') %>">
-                              <%= link_to "2 Column Portfolio", portfolio2col_path %>
-                            </li>
-                            <li class="<%= is_active?('/welcome/portfolio3col') %>">
-                              <%= link_to "3 Column Portfolio", portfolio3col_path %>
-                            </li>
-                            <li class="<%= is_active?('/welcome/portfolio4col') %>">
-                              <%= link_to "4 Column Portfolio", portfolio4col_path  %>
-                            </li>
-                            <li class="<%= is_active?('/welcome/portfolioitem') %>">
-                              <%= link_to "Single Portfolio", portfolioitem_path %>
-                            </li>
-                        </ul>
+                    <li class="<%= is_active?('/welcome/bloghome2') %>">
+                        <%= link_to "Blog", bloghome2_path %>
                     </li>
-                    <li class="<%= is_blog_active?%>">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Blog <b class="caret"></b></a>
-                        <ul class="dropdown-menu">
-                            <li class="<%= is_active?('/welcome/bloghome1') %>">
-                              <%= link_to "Blog Home 1", bloghome1_path %>
-                            </li>
-                            <li class="<%= is_active?('/welcome/bloghome2') %>">
-                              <%= link_to "Blog Home 2", bloghome2_path %>
-                            </li>
-                            <li class="<%= is_active?('/welcome/blogpost') %>">
-                              <%= link_to "Blog Post", blogpost_path %>
-                            </li>
-                        </ul>
+                    <li class="<%#= is_active?('/welcome/bloghome2') %>">
+                        <%= link_to "Sign up", bloghome2_path %>
                     </li>
-                    <li class="<%= is_otherpages_active?%>">
+                    <li class="<%#= is_active?('/welcome/bloghome2') %>">
+                        <%= link_to "Login", bloghome2_path %>
+                    </li>
+                    <li class="<%#= is_active?('/welcome/bloghome2') %>">
+                        <%= link_to "Logout", bloghome2_path %>
+                    </li>
+                    <!-- <li class="<%#= is_portfolio_active?%>"> -->
+                        <!-- <a href="#" class="dropdown-toggle" data-toggle="dropdown">Portfolio <b class="caret"></b></a> -->
+                        <!-- <ul class="dropdown-menu"> -->
+                            <!-- <li class="<%#= is_active?('/welcome/portfolio1col') %>"> -->
+                              <%#= link_to "1 Column Portfolio", portfolio1col_path %>
+                            <!-- </li> -->
+                            <!-- <li class="<%#= is_active?('/welcome/portfolio2col') %>"> -->
+                              <%#= link_to "2 Column Portfolio", portfolio2col_path %>
+                            <!-- </li> -->
+                            <!-- <li class="<%#= is_active?('/welcome/portfolio3col') %>"> -->
+                              <%#= link_to "3 Column Portfolio", portfolio3col_path %>
+                            <!-- </li> -->
+                            <!-- <li class="<%#= is_active?('/welcome/portfolio4col') %>"> -->
+                              <%#= link_to "4 Column Portfolio", portfolio4col_path  %>
+                            <!-- </li> -->
+                            <!-- <li class="<%#= is_active?('/welcome/portfolioitem') %>"> -->
+                              <%#= link_to "Single Portfolio", portfolioitem_path %>
+                            <!-- </li> -->
+                        <!-- </ul> -->
+                    <!-- </li> -->
+                    <!-- <li class="<%#= is_blog_active?%>"> -->
+                        <!-- <a href="#" class="dropdown-toggle" data-toggle="dropdown">Blog <b class="caret"></b></a> -->
+                        <!-- <ul class="dropdown-menu"> -->
+                            <!-- <li class="<%#= is_active?('/welcome/bloghome1') %>"> -->
+                              <%#= link_to "Blog Home 1", bloghome1_path %>
+                            <!-- </li> -->
+                            <!-- <li class="<%#= is_active?('/welcome/bloghome2') %>"> -->
+                              <%#= link_to "Blog Home 2", bloghome2_path %>
+                            <!-- </li> -->
+                            <!-- <li class="<%#= is_active?('/welcome/blogpost') %>"> -->
+                              <%#= link_to "Blog Post", blogpost_path %>
+                            <!-- </li> -->
+                        <!-- </ul> -->
+                    <!-- </li> -->
+                    <!-- <li class="<%#= is_otherpages_active?%>">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">Other Pages <b class="caret"></b></a>
                         <ul class="dropdown-menu">
-                            <li class="<%= is_active?('/welcome/fullwidth') %>">
-                              <%= link_to "Full Width Page", fullwidth_path %>
+                            <li class="<%#= is_active?('/welcome/fullwidth') %>">
+                              <%#= link_to "Full Width Page", fullwidth_path %>
                             </li>
-                            <li class="<%= is_active?('/welcome/sidebar') %>">
-                              <%= link_to "Sidebar Page", sidebar_path %>
+                            <li class="<%#= is_active?('/welcome/sidebar') %>">
+                              <%#= link_to "Sidebar Page", sidebar_path %>
                             </li>
-                            <li class="<%= is_active?('/welcome/faq') %>">
-                              <%= link_to "FAQ", faq_path %>
+                            <li class="<%#= is_active?('/welcome/faq') %>">
+                              <%#= link_to "FAQ", faq_path %>
                             </li>
-                            <li class="<%= is_active?('/welcome/p404') %>">
-                                <%= link_to '404', p404_path %>
+                            <li class="<%#= is_active?('/welcome/p404') %>">
+                                <%#= link_to '404', p404_path %>
                             </li>
-                            <li class="<%= is_active?('/welcome/pricing') %>">
-                              <%= link_to "Pricing Table", pricing_path %>
+                            <li class="<%#= is_active?('/welcome/pricing') %>">
+                              <%#= link_to "Pricing Table", pricing_path %>
                             </li>
                         </ul>
-                    </li>
+                    </li> -->
                 </ul>
             </div>
             <!-- /.navbar-collapse -->
