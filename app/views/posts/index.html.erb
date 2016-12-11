@@ -44,12 +44,19 @@
 
 <% end %>
 
+<%#= will_paginate @posts, previous_label: "<", next_label: ">" %>
+
+
 <!-- Pager -->
 <div class="row">
     <ul class="pager">
-        <li class="previous"><a href="#">&larr; Older</a>
+        <li class="previous">
+            <%= link_to "< Newer", params.permit(:page).merge(page: @posts.previous_page) if @posts.previous_page %>
+            <!-- <a href="#">&larr; Older</a> -->
         </li>
-        <li class="next"><a href="#">Newer &rarr;</a>
+        <li class="next">
+            <%= link_to "Older >", params.permit(:page).merge(page: @posts.next_page) if @posts.next_page %>
+            <!-- <a href="#">Newer &rarr;</a> -->
         </li>
     </ul>
 </div>
