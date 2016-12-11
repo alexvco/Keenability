@@ -1,6 +1,18 @@
-<h1>Editing Post</h1>
+<div class="container">
+  <div class="row">
+    <div class="col-md-6 col-md-offset-3">
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h3 class="panel-title">New Post</h3>
+        </div>
 
-<%= render 'form', post: @post %>
+        <div class="panel-body" data-hook="">
+          <%= render 'form', post: @post %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 
-<%= link_to 'Show', @post %> |
-<%= link_to 'Back', posts_path %>
+
+<%= link_to '<< Back', @post, class: "btn btn-primary" %>
