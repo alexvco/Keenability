@@ -1,6 +1,6 @@
 class PostsController < ApplicationController
-  before_action :set_post, only: [:show, :edit, :update, :destroy]
-  before_action :authenticate_user!, only: [:new, :create, :edit, :update, :destroy]
+  before_action :set_post, only: [:show, :edit, :update, :destroy, :create_comment]
+  before_action :authenticate_user!, only: [:new, :create, :edit, :update, :destroy, :create_comment]
   # GET /posts
   # GET /posts.json
   def index
@@ -10,6 +10,16 @@ class PostsController < ApplicationController
   # GET /posts/1
   # GET /posts/1.json
   def show
+    @comments = @post.comments
+  end
+
+  def create_comment
+    @comment = @post.comments.build(comment_params)
+    @comment.user_id = current_user.id
+
+    if @comment.save
+      redirect_to @post
+    end
   end
 
   # GET /posts/new
@@ -70,5 +80,9 @@ class PostsController < ApplicationController
     # Never trust parameters from the scary internet, only allow the white list through.
     def post_params
       params.require(:post).permit(:title, :content, :user_id)
+    end 
+
+    def comment_params
+      params.require(:comment).permit!
     end
 end

@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   root 'welcome#index'
   resources :posts
   # resources :users
+  match '/posts/:id/', to: 'posts#create_comment', via: :post, as: 'create_comment'
 
   # get 'contact/contact_us', as: 'contact'
   # post 'contact/create'
