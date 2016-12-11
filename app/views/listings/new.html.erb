@@ -3,16 +3,16 @@
     <div class="col-md-6 col-md-offset-3">
       <div class="panel panel-default">
         <div class="panel-heading">
-          <h3 class="panel-title">Edit Post</h3>
+          <h3 class="panel-title">New Listing</h3>
         </div>
-
         <div class="panel-body" data-hook="">
-          <%= render 'form', post: @post %>
+
+          <%= render 'form', listing: @listing %>
+
         </div>
       </div>
     </div>
   </div>
 </div>
 
-
-<%= link_to '<< Back', @post, class: "btn btn-primary" %>
+<%#= link_to 'Back', listings_path %>
