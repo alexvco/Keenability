@@ -10,7 +10,7 @@ class PostsController < ApplicationController
   # GET /posts/1
   # GET /posts/1.json
   def show
-    @comments = @post.comments
+    @comments = @post.comments.order(created_at: "desc")
   end
 
   def create_comment
@@ -18,7 +18,7 @@ class PostsController < ApplicationController
     @comment.user_id = current_user.id
 
     if @comment.save
-      redirect_to @post
+      redirect_to @post, notice: 'Your comment was successfully posted.'
     end
   end
 
