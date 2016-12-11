@@ -29,15 +29,18 @@
                     <li class="<%= is_active?('/welcome/bloghome2') %>">
                         <%= link_to "Blog", bloghome2_path %>
                     </li>
-                    <li class="<%#= is_active?('/welcome/bloghome2') %>">
-                        <%= link_to "Sign up", bloghome2_path %>
-                    </li>
-                    <li class="<%#= is_active?('/welcome/bloghome2') %>">
-                        <%= link_to "Login", bloghome2_path %>
-                    </li>
-                    <li class="<%#= is_active?('/welcome/bloghome2') %>">
-                        <%= link_to "Logout", bloghome2_path %>
-                    </li>
+                    <% if !user_signed_in? %>
+                        <li class="<%#= is_active?('/welcome/bloghome2') %>">
+                            <%= link_to "Sign up", new_user_registration_path %>
+                        </li>
+                        <li class="<%#= is_active?('/welcome/bloghome2') %>">
+                            <%= link_to "Login", new_user_session_path %>
+                        </li>
+                    <% else %>
+                        <li class="<%#= is_active?('/welcome/bloghome2') %>">
+                            <%= link_to "Logout", destroy_user_session_path, :method => :delete %>
+                        </li>
+                    <% end %>
                     <!-- <li class="<%#= is_portfolio_active?%>"> -->
                         <!-- <a href="#" class="dropdown-toggle" data-toggle="dropdown">Portfolio <b class="caret"></b></a> -->
                         <!-- <ul class="dropdown-menu"> -->

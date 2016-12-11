@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Groupshalex</title>
+  <title>Keenability</title>
   <!-- the following code is for internet explorer  -->
   <!--[if lt IE 9]>
     <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"
@@ -50,9 +50,7 @@
 <!-- Page Content -->
 <div class="container">
 
-  <% flash.each do |message_type, message| %>
-    <div class="alert alert-<%= message_type %>"><%= message %><button class="close" data-dismiss="alert">×</button></div>
-  <% end %>
+<%= flash_messages %>
 
 <%= yield %>
 
